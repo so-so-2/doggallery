@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #d3ebff;
+}
+
+
+
+
+.main-visual-content h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.main-visual-content p {
+  font-size: 1.5rem;
+  margin: 10px 0 0;
+}
+
+header {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  height: 50px;
+  padding: 20px;
+  top: 0;
+  width: 100;
+  margin-bottom: 100px;
+  position: top;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  line-height: 20pxS;
+
+}
+
+
+
+h1 {
+    text-align: center;
+    line-height: 10px;
+  }
+  
+  #gallery {
+    display: grid;
+    max-width: 1000px;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    
+  }
+
+  
+  .img-item {
+    opacity: 0;
+    filter: blur(10px);
+    width: 100%;
+    transition: transform 0.3s ease; /* アニメーションの滑らかさを設定 */
+  }
+  .img-item:hover{
+    transform: scale(1.1); /* 1.1倍に拡大 */
+  }
+  
+  .img-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
+  }
+  
+  .img-item p {
+    text-align: center;
+  }
+
+  footer {
+    background: #1c1c1c;
+    color: #FFF;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  
+  #menu ul {
+    list-style: none;
+    padding: 1rem 0;
+  }
+  
+  #menu li {
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  #menu a {
+    color: #FFF;
+    text-decoration: none;
+    transition: color .5s;
+}
+
+#menu a:hover {
+  color: #666;
+}
+
+#loading {
+  transition: all 3s; /*ローディングにかかる時間*/
+  background-color: #FFF;
+  z-index: 999;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loading-text {
+  font-weight: bold;
+  text-align: center;
+}
+
+.spin {
+  width: 64px;
+  height: auto;
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}  
